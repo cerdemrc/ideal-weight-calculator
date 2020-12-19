@@ -8,9 +8,23 @@
           <div class="col-sm-10">
             <input
               type="number"
+              @blur="$v.content.size.$touch()"
               v-model.number="content.size"
               class="form-control"
             />
+            <span class="form-text text-danger" v-if="!$v.content.size.required"
+              >Bu alan zorunludur</span
+            >
+            <span
+              class="form-text text-danger"
+              v-if="!$v.content.size.minLength"
+              >Bu alan 3 haneli olmalı</span
+            >
+            <span
+              class="form-text text-danger"
+              v-if="!$v.content.size.maxLength"
+              >Bu alan 3 haneli olmalı</span
+            >
           </div>
         </div>
         <div class="row mb-3">
@@ -21,6 +35,21 @@
               v-model.number="content.weight"
               class="form-control"
             />
+            <span
+              class="form-text text-danger"
+              v-if="!$v.content.weight.required"
+              >Bu alan zorunludur</span
+            >
+            <span
+              class="form-text text-danger"
+              v-if="!$v.content.weight.minLength"
+              >Min 2 haneli olmalı</span
+            >
+            <span
+              class="form-text text-danger"
+              v-if="!$v.content.weight.maxLength"
+              >Max 3 haneli olmalı</span
+            >
           </div>
         </div>
         <div class="row mb-3">
@@ -47,10 +76,11 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-12">
+        <div class="row mb-3">
           <button
             type="button"
             @click="calculate"
+            :disabled="$v.$invalid"
             class="btn btn-outline-light btn-block"
           >
             Hesapla
@@ -64,6 +94,12 @@
 
 <script>
 import Results from "./Results";
+import {
+  required,
+  numeric,
+  minLength,
+  maxLength,
+} from "vuelidate/lib/validators";
 export default {
   components: {
     Results,
@@ -77,6 +113,23 @@ export default {
       },
       isClicked: false,
     };
+  },
+  validations: {
+    content: {
+      size: {
+        required,
+        numeric,
+        minLength: minLength(3),
+        maxLength: maxLength(3),
+      },
+      weight: {
+        required,
+        numeric,
+        minLength: minLength(2),
+        maxLength: maxLength(3),
+      },
+      gender: { required },
+    },
   },
   methods: {
     calculate() {
