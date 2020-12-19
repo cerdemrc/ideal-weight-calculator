@@ -3,7 +3,7 @@
     <div class="row mt-5 d-flex justify-content-center">
       <div class="col-sm-2 kilo">
         <label>Boy Kilo Endeksi</label>
-        <h1></h1>
+        <h1>{{ index }}</h1>
       </div>
       <div class="col-sm-6">
         <h1>{{ message.title }}</h1>
@@ -28,6 +28,9 @@ export default {
     },
     message() {
       return this.$store.getters.getMessage;
+    },
+    index() {
+      return this.$store.getters.getIndex;
     },
   },
 };

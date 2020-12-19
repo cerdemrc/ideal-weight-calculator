@@ -81,6 +81,7 @@ export default {
   methods: {
     calculate() {
       this.$store.commit("setIdealWeight", this.content);
+      this.$store.commit("setIndex", this.content);
       this.isClicked = true;
     },
   },
