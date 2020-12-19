@@ -1,24 +1,3 @@
-# weight-calculator
+<h3>DEMO: https://cerdemrc.github.io/ideal-weight-calculator/ </h3>
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<img src="https://user-images.githubusercontent.com/40372039/102691521-3163ac80-421e-11eb-9c6f-d194c46fa989.png">
