@@ -51,7 +51,7 @@
           <button
             type="button"
             @click="calculate"
-            class="btn btn-primary btn-block"
+            class="btn btn-outline-light btn-block"
           >
             Hesapla
           </button>
@@ -89,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$raleway: Raleway;
+$montserrat: "Montserrat", sans-serif;
 form {
   display: flex;
   flex-direction: column;
@@ -97,7 +97,8 @@ form {
 }
 
 h1 {
-  font-family: $raleway;
-  font-size: 2.6em;
+  font-family: $montserrat;
+  font-size: 2.7em;
+  text-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.575);
 }
 </style>

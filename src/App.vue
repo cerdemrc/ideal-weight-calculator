@@ -15,11 +15,15 @@ export default {
 
 <style lang="scss">
 body {
-  background: rgb(211, 178, 255);
+  background: radial-gradient(
+    circle,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(253, 187, 45, 1) 100%
+  );
 }
 #app {
   text-align: center;
-  color: #1b2b3b;
+  color: white;
   margin-top: 80px;
 }
 </style>

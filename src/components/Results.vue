@@ -38,33 +38,35 @@ export default {
 
 <style lang="scss" scoped>
 $black: black;
+$orange: orange;
+$info: rgb(36, 207, 190);
 $raleway: Raleway;
 .row {
-  background: wheat;
   font-family: $raleway;
   .kilo {
-    background: orange;
+    background: $orange;
     border-radius: 100%;
     width: 200px;
     height: 200px;
   }
   .ideal {
-    background: rgb(94, 252, 236);
+    background: $info;
     border-radius: 100%;
     width: 200px;
     height: 200px;
   }
   label {
-    margin-top: 40px;
+    margin-top: 50px;
     font-size: 1.1em;
     font-weight: bold;
   }
   h1 {
-    font-size: 2em;
-    margin-top: 10px;
+    font-size: 2.3em;
+    margin-top: 20px;
   }
   h2 {
     font-size: 1.3em;
+    margin-top: 30px;
   }
 }
 </style>
