@@ -1,0 +1,12 @@
+@import "../style/variables.scss";
+form {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+h1 {
+  font-family: $montserrat;
+  font-size: 2.7em;
+  text-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.575);
+}
