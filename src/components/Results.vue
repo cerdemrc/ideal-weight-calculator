@@ -1,15 +1,15 @@
 <template>
   <div class="container" v-if="clicked">
     <div class="row mt-5 d-flex justify-content-center">
-      <div class="col-sm-2 kilo">
+      <div class="col-xs-12 col-md-4 col-lg-3 weight">
         <label>Boy Kilo Endeksi</label>
         <h3>{{ index }}</h3>
       </div>
-      <div class="col-sm-6">
+      <div class="col-xs-12 col-md-4">
         <h1>{{ message.title }}</h1>
-        <h2>{{ message.content }}</h2>
+        <p>{{ message.content }}</p>
       </div>
-      <div class="col-sm-2 ideal">
+      <div class="col-xs-12 col-md-4 col-lg-3 ideal-weight">
         <label>İdeal Kilo Ağırlığı</label>
         <h3>{{ idealWeight }}</h3>
       </div>
@@ -37,39 +37,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$black: black;
-$orange: rgb(252, 171, 21);
-$raleway: Raleway;
-.row {
-  font-family: $raleway;
-  .kilo {
-    background: $orange;
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-  }
-  .ideal {
-    background: $orange;
-    border-radius: 100%;
-    width: 200px;
-    height: 200px;
-  }
-  label {
-    margin-top: 50px;
-    font-size: 1.1em;
-    font-weight: bold;
-  }
-  h1 {
-    font-size: 2.3em;
-    margin-top: 20px;
-  }
-  h2 {
-    font-size: 1.3em;
-    margin-top: 30px;
-  }
-  h3 {
-    font-size: 2.5em;
-    margin-top: 10px;
-  }
-}
+@import "../style/results.scss";
 </style>

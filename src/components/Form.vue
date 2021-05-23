@@ -59,20 +59,22 @@
               <input
                 class="form-check-input"
                 type="radio"
+                id="woman"
                 v-model="content.gender"
                 value="Kadin"
                 checked
               />
-              <label class="form-check-label">Kadın</label>
+              <label class="form-check-label" for="woman"> Kadın </label>
             </div>
             <div class="form-check">
               <input
                 class="form-check-input"
                 type="radio"
+                id="man"
                 v-model="content.gender"
                 value="Erkek"
               />
-              <label class="form-check-label">Erkek</label>
+              <label class="form-check-label" for="man"> Erkek </label>
             </div>
           </div>
         </div>
@@ -142,16 +144,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$montserrat: "Montserrat", sans-serif;
-form {
-  display: flex;
-  flex-direction: column;
-  justify-items: center;
-}
-
-h1 {
-  font-family: $montserrat;
-  font-size: 2.7em;
-  text-shadow: 0.5px 0.5px 8px rgba(0, 0, 0, 0.575);
-}
+@import "../style/form.scss";
 </style>
